@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Video.js unique 3 Skins pack</title>
+
+    <!-- Video.js source files CSS + JS -->
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <!-- Video.js plugins CSS + JS -->
+    <link href="https://players.brightcove.net/videojs-thumbnails/videojs.thumbnails.css" rel="stylesheet">
+    <link href="https://players.brightcove.net/videojs-bc-playlist-ui/1/videojs-bc-playlist-ui.css" rel="stylesheet">
+    <script src="https://players.brightcove.net/videojs-thumbnails/videojs.thumbnails.js"></script>
+    <script src="../js/videojs-playlist.js"></script>
+    <script src="https://players.brightcove.net/videojs-bc-playlist-ui/1/videojs-bc-playlist-ui.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+
+
+    <!-- Video.js skins plugin CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="/js/app.js"></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/video.css">
+
+
+    <!-- Demo only CSS -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // Demo Thumbnails
+
+        var thumbnails = {
+            "0": {
+                "src": "http://solutions.brightcove.com/bcls/assets/images/sea-lionfish-thumbnail.png"
+            },
+            "30": {
+                "src": "http://solutions.brightcove.com/bcls/assets/images/sea-anemone-thumbnail.png"
+            },
+            "60": {
+                "src": "http://solutions.brightcove.com/bcls/assets/images/sea-clownfish-thumbnail.png"
+            },
+            "90": {
+                "src": "http://solutions.brightcove.com/bcls/assets/images/sea-seahorse-thumbnail.png"
+            },
+
+        }
+
+        // Demo Playlists
+        var playlist = [{
+            name: 'Demo video 1',
+            description: 'Duis justo sem, auctor at faucibus in, finibus in nulla. Nulla vitae eros non ligula hendrerit semper. Fusce facilisis commodo turpis in egestas.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: 'http://solutions.brightcove.com/bcls/assets/images/sea-lionfish-thumbnail.png'
+            }]
+        }, {
+            name: 'Demo video 2',
+            description: 'Mauris vulputate nibh ac risus tristique congue. Vestibulum sollicitudin mattis elit, ac volutpat libero interdum ut.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4?2',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm?2',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: 'http://solutions.brightcove.com/bcls/assets/images/sea-anemone-thumbnail.png'
+            }]
+        }, {
+            name: 'Demo video 3',
+            description: 'Donec tincidunt diam eget justo ultricies, a varius massa laoreet. Nullam et faucibus augue. Phasellus feugiat eros ante.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4?3',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm?3',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: 'http://solutions.brightcove.com/bcls/assets/images/sea-seahorse-thumbnail.png'
+            }]
+        }, {
+            name: 'Demo video 4',
+            description: 'hasellus feugiat eros ante, donec tincidunt diam eget justo ultricies, a varius massa laoreet. Nullam et faucibus augue.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4?4',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm?4',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: 'http://solutions.brightcove.com/bcls/assets/images/sea-anemone-thumbnail.png'
+            }]
+        }, {
+            name: 'Demo video 5',
+            description: 'hasellus feugiat eros ante, donec tincidunt diam eget justo ultricies, a varius massa laoreet. Nullam et faucibus augue.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4?5',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm?5',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: '../img/poster.jpg',
+            }]
+        }, {
+            name: 'Demo video 6',
+            description: 'Donec tincidunt diam eget justo ultricies, a varius massa laoreet. Nullam et faucibus augue. Phasellus feugiat eros ante.',
+            duration: 45,
+            sources: [{
+                src: 'http://vjs.zencdn.net/v/oceans.mp4?6',
+                type: 'video/mp4'
+            }, {
+                src: 'http://vjs.zencdn.net/v/oceans.webm?6',
+                type: 'video/webm'
+            }, ],
+            thumbnail: [{
+                src: 'http://solutions.brightcove.com/bcls/assets/images/sea-seahorse-thumbnail.png'
+            }]
+        }, ]
+    </script>
+    <!-- Skin 2 demo -->
+    <section class="b-video">
+        <div class="nav-wrapper">
+            <div class="container">
+                <div class="nav">
+                    <a href="#" class="logo">
+                        <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x
+                    </a>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li>
+                            <input type="search" value="" id="search" onchange="openPage()" list="video-list">
+                            <datalist id="video-list">
+                                <option value="pokemon"></option>
+                                <option value="pokemon"></option>
+                                <option value="pokemon"></option>
+                            </datalist>
+                        </li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Series</a></li>
+                        <li><a href="#">cartoons</a></li>
+                        <li><a href="#">About</a></li>
+                        <li>
+                            <a href="#" class="btn btn-hover">
+                                <span>Sign in</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- MOBILE MENU TOGGLE -->
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <div class="hamburger"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Video -->
+        <div class="b-player playlist-aside">
+            <video id="video-2" class="video-js skin-2" controls preload="auto" poster="../img/poster-2.jpg" data-setup="{}">
+			<source src="https://storage.googleapis.com/red-context-322613/H27FPM1I7P2W/st22_pokemon-season-04-johto-league-champions-episode-51-SD.mp4" type='video/mp4'>
+		</video>
+            <div class="vjs-playlist vjs-playlist-video-2 vjs-playlist-skin-2"></div>
+        </div>
+        <!-- Video 2 init DEMO -->
+    </section>
+
+    <script>
+        var video2 = videojs('video-2');
+
+        video2.thumbnails(thumbnails); // thumbnails init
+
+        video2.playlist(playlist); // playlists init
+        video2.playlistUi({
+            className: 'vjs-playlist-video-2'
+        });
+    </script>
+
+</body>
+
+</html>
